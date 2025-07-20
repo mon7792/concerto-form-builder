@@ -1,0 +1,16 @@
+services:
+  concerto_db:
+    container_name: concerto_db
+    image: postgres:16
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: concerto
+      POSTGRES_PASSWORD: concerto
+      POSTGRES_DB: concerto
+    volumes:
+      - concerto_db_data:/var/lib/postgresql/data
+
+volumes:
+  concerto_db_data:
