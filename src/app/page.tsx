@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
           </li>
         </ol>
 
-        <Button>Click me</Button>
+        <Link href="/form">
+          <Button>Form</Button>
+        </Link>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
